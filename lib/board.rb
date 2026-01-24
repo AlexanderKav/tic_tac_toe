@@ -28,30 +28,25 @@ class Board
   def self.game_over?(mark, player_name)
     case    
         when 
-            @@board_layout[0][0] == mark && @@board_layout[0][1]== mark && @@board_layout[0][2] == mark
-                || 
-            @@board_layout[1][0] == mark && @@board_layout[1][1] == mark && @@board_layout[1][2] == mark
-                ||
-            @@board_layout[2][0]== mark && @@board_layout[2][1]== mark && @@board_layout[2][2]== mark
-                ||
+            @@board_layout[0][0] == mark && @@board_layout[0][1]== mark && @@board_layout[0][2] == mark || 
+            @@board_layout[1][0] == mark && @@board_layout[1][1] == mark && @@board_layout[1][2] == mark ||
+            @@board_layout[2][0]== mark && @@board_layout[2][1]== mark && @@board_layout[2][2]== mark ||
+               
 
-            @@board_layout[0][0]== mark && @@board_layout[1][0]== mark && @@board_layout[2][0]== mark
-                ||
-            @@board_layout[0][1]== mark && @@board_layout[1][1]== mark && @@board_layout[2][1]== mark
-                ||
-            @@board_layout[0][2]== mark && @@board_layout[1][2] == mark && @@board_layout[2][2]== mark
-                ||
+            @@board_layout[0][0]== mark && @@board_layout[1][0]== mark && @@board_layout[2][0]== mark ||
+            @@board_layout[0][1]== mark && @@board_layout[1][1]== mark && @@board_layout[2][1]== mark ||
+            @@board_layout[0][2]== mark && @@board_layout[1][2] == mark && @@board_layout[2][2]== mark ||
+                
 
-            @@board_layout[0][0] == mark && @@board_layout[1][1]== mark && @@board_layout[2][2]== mark
-                ||
+            @@board_layout[0][0] == mark && @@board_layout[1][1]== mark && @@board_layout[2][2]== mark ||
             @@board_layout[0][2] == mark && @@board_layout[1][1]== mark && @@board_layout[2][0]== mark
                 puts player_name + " won!!!"  
                 puts "Game Over"
                 true
         else 
             false
-        end
     end
+  end
 
 
     def self.is_draw?
